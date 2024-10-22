@@ -1,0 +1,25 @@
+<%- include("base.ejs") %>
+
+<body>
+    <center><h1>Delete USER PAGE</h1></center>
+
+    <% if (results && results.length > 0) { %>
+        <% results.forEach(res => { %>
+            <form action="/home/delete/<%= res.id %>" method="post">
+                <h3>UserID @</h3><%= res.id %>
+                <br>
+                <h3>UserName @</h3><%= res.username %>
+                <br>
+                <h2>Enter Correct Mail & Password to Delete User</h2>
+                <br>
+                <textarea name="email" id="" placeholder="email"></textarea>
+                <textarea name="password" id="" placeholder="password"></textarea>
+                <br>
+                <button>Delete</button> 
+            </form>
+        <% }); %>
+    <% } else { %>
+        <p>No user found for deletion.</p>
+    <% } %>
+</body>
+</html>

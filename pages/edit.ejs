@@ -1,0 +1,14 @@
+<%- include("base.ejs") %>
+
+<body>
+    <center><h1>EDIT USER PAGE</h1></center>
+    <h2>Edit form</h2>
+    UserID @ <h3><%= result.id %></h3>
+    Email @ <h3><%= result.email %></h3>
+    <form action="/home/<%= result.id %>?_method=PATCH" method="POST" style="display: flex; padding-top: 1rem;">
+        <textarea name="username" placeholder="Enter new username" required></textarea>
+        <textarea name="pass" placeholder="Enter password" required></textarea> 
+        <button>Submit</button>
+    </form>
+</body>
+</html>

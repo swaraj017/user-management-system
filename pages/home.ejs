@@ -1,0 +1,42 @@
+<%- include("base.ejs") %>
+
+<body>
+    <center>
+        <h1>USER MANAGEMENT SYSTEM</h1>
+        <table>
+            <tbody>
+                <tr>
+                    <th>SrNo</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>ID</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+
+                <% result.forEach((res, index) => { %>
+                    <tr>
+                        <td><%= index + 1 %></td> <!-- Increment index by 1 for SrNo -->
+                        <td><%= res.username %></td>
+                        <td><%= res.email %></td>
+                        <td><%= res.id %></td>
+                        <td>
+                            <form action="/home/<%= res.id %>/edit" method="GET">
+                                <button>Edit</button>
+                            </form>
+                        </td>
+                        <td>
+                            <form action="/home/<%= res.id %>/delete" method="GET">
+                                <button type="submit">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+        <form action="/home/new" method="get">
+            <button>Add New User</button>
+        </form>
+    </center>
+</body>
+</html>

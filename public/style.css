@@ -1,0 +1,26 @@
+body {
+    background-color: rgb(234, 255, 199);
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+h1 {
+    color: #2c3e50;
+} 
+  table td, table th {
+    background-color: rgb(18, 16, 16);
+    border: 1px solid #000000;
+    padding: 8px;
+    color: #ddd;
+  }
+  
+table tr:nth-child{background-color: #f2f2f2;}
+  table tr:hover {background-color: #ddd;}
+  
+  table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #123c4c;
+    color: white;
+  }

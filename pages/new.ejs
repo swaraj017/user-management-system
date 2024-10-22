@@ -1,0 +1,14 @@
+<%- include("base.ejs") %>
+
+<body><center><h1>New USER PAGE</h1></center>
+    <h1>Add New User</h1>
+    NewUserId : <%= newuserid %>
+    <form action="/home/new/<%= newuserid %>" style="display: block; padding-top: 1rem;" method="post">
+        Username :<input type="text" name="username" placeholder="enter a name">
+        Email :<input type="email" name="email" placeholder="enter a email">
+        Password:<input type="password" name="password" placeholder="enter pass">
+         <button>ADD</button> 
+
+    </form>
+</body>
+</html>
